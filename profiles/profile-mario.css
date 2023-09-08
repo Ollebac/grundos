@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+/* 
+SNK: https://i.imgur.com/W4IGSUg.gif
+
+*/
+
+/* .ul--shield {
+    content: url('https://i.imgur.com/W4IGSUg.gif');
+} */
+
+/* Set Font */
+html {
+    font-size: 16px;
+}
+
+.smallfont {
+    font-size: .8rem;
+}
+
+/* Hidden Content */
+#sb_top,
+#sb_side,
+#page_banner,
+#page_footer,
+.ul--guilds,
+#userLookupSiteTrophies,
+hr {
+    display: none;
+}
+
+/* Reset Presets*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif
+}
+
+a {
+    text-decoration: none;
+}
+
+#container {
+    background-image: url('https://i.imgur.com/G4pOXo4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#userLookupContent {
+    width: 800px;
+    height: 500px;
+    overflow-y: scroll;
+    /* transform: translateY(-10px); */
+}
+
+/* Page Event */
+#page_event {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Header */
+.ul--header {
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    content: url('https://i.imgur.com/v50bk9x.gif');
+    transform: scale(.9);
+}
+
+/* User Lookup General Background & Border */
+#userLookupContent {
+    /* background-color: rgb(218, 218, 218); */
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* User HTML */
+#description {
+    height: 70px;
+    width: 100%;
+}
+
+
+/* Nav Menu */
+#userLookupDesc {
+    margin-top: 20px;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    width: 800px;
+}
+
+.nav_item {
+    padding: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    background-color: #994E00;
+    padding: 8px 20px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 2px 2px 1px black;
+    border: .5px solid black;
+}
+
+.nav_item:hover,
+.nav_item:active {
+    text-shadow: -1px -1px 0px black;
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+/* Set start positions for each section */
+#userLookupInfo {
+    margin-top: 30px;
+}
+
+#userLookupInfo, 
+#userLookupPets,
+#userLookupGameTrophies {
+    scroll-margin-top: 90px;
+}
+
+
+/* Set end positions for each section */
+#userLookupLinks,
+#userLookupGameTrophies {
+    margin-bottom: 70px;
+}
+
+#userLookupPets {
+    margin-bottom: 90px;
+}
+
+/* User Info */
+#userLookupInfo,
+#userLookupLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#userLookupText > div {
+    margin: 3px 0;
+}
+
+.ul--infolabel {
+    color: #994E00;
+}
+
+.ul--infolabel::after {
+    content: ': ';
+}
+
+.ul--shield {
+    width: 125px;
+}
+
+#userLookupCollections {
+    text-align: center;
+}
+
+#userLookupCollections > div {
+    margin: 30px 0;
+}
+
+.ul--avatarstext,
+.ul--stampstext {
+    margin-top: 5px;
+}
+
+.ul--collectionslabel::after {
+    content: ': '
+}
+
+/* User Links */
+
+#userLookupLinks {
+    text-align: center;
+}
+
+.ul--linkimg {
+    width: 40px;
+    height: 55px;
+    margin-bottom: 5px;
+}
+
+.ul--tradesimg {
+    content: url('https://i.imgur.com/AzC8HYL.png');
+}
+
+.ul--auctionsimg {
+    content: url('https://i.imgur.com/19XvAZZ.png');
+    width: 35px;
+    height: 45px;
+    margin: 7.5px 0;
+}
+
+.ul--wishlistimg {
+    content: url('https://i.imgur.com/pZArd1N.png');
+}
+
+.ul--scoresimg {
+    content: url('https://i.imgur.com/biSyxaS.png');
+}
+
+.ul--neomailimg {
+    content: url('https://i.imgur.com/nivMxyA.png');
+}
+
+.ul--neofriendimg {
+    content: url('https://i.imgur.com/SdYrybO.png');
+}
+
+.ul--scoresimg,
+.ul--neofriendimg {
+    width: 45px;
+    height: 45px;
+    margin: 7.5px 0; 
+}
+
+.ul--neofriendimg {
+    transform: translateY(-7.5px);
+}
+
+/* Pets */
+#userLookupPets {
+    padding-top: 20px;
+    overflow-y: scroll;
+    min-height: 340px;
+    scrollbar-width: thin;
+    scrollbar-color: #994E00 #eaeaea;
+}
+
+#userPetList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.ul__pet {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 130px;
+    margin-top: 10px;
+}
+
+/* Trophies */
+#userLookupGameTrophies {
+    padding: 20px;
+    overflow-y: scroll;
+    min-height: 340px;
+    scrollbar-width: thin;
+    scrollbar-color: #994E00 #eaeaea;
+}
+
+.ul__gametrophy {
+    width: 140px;
+    margin-top: 10px;
+}
+
+.ul--gametrophyname {
+    font-size: .75rem;
+}
