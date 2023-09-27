@@ -1,0 +1,45 @@
+#userLookupLinks {
+  width: 500px;
+  flex-wrap: wrap;
+  background-color: #FFA5E6;
+  padding: 20px 170px 20px 20px;
+  box-sizing: border-box;
+}
+.ul__link {
+  width: 80px;
+  margin: 10px;
+}
+#userLookupContent {
+  display: grid;
+  grid-template-columns: 500px 600px;
+  grid-template-areas: 'info         .   ' 'info         desc' 'info         desc' 'info         desc' 'links        pets' 'guilds       pets' 'sitetrophies pets' 'gametrophies pets' 'report report';
+  gap: 30px;
+}
+#userLookupSiteTrophies {
+  grid-area: sitetrophies;
+}
+#userLookupGameTrophies {
+  grid-area: gametrophies;
+}
+#userLookupPets {
+  grid-area: pets;
+}
+#userLookupInfo {
+  grid-area: info;
+}
+#userLookupLinks {
+  grid-area: links;
+}
+#userLookupContent > div {
+  background-color: #FFA5E6;
+}
+#userLookupDesc {
+  grid-area: desc;
+}
+#userReportBlock {
+  grid-area: report;
+}
+.ul--shield {
+  content: url('https://i.imgur.com/mMOxqSN.jpg');
+  width: 300px;
+}
