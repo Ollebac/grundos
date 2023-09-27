@@ -1,0 +1,210 @@
+@import url('https://fonts.cdnfonts.com/css/alice-in-wonderland');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Dancing+Script:wght@700&family=Fuzzy+Bubbles&family=Poppins:wght@500&family=Short+Stack&display=swap');
+
+
+/* Hide Content */
+
+#userinfo, #sb_clock, #sb_search, #sb_banner, #sb_lang, #page_banner,
+#aio_sidebar_placeholder, .gallery-item-qty, hr, #sb_side,
+.pet--smallname, #petLead, .pet--petpetheader, #petBattleImage,
+#page_footer {
+    display: none;
+}
+
+/* Reset Margin/Padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100vh;
+    scrollbar-width: thin;
+    scrollbar-color: #b68bf4 rgb(179, 179, 179);
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.imgur.com/E8QinlL.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Poppins, monospace;
+}
+
+#container {
+    height: 100%;
+    min-height: 750px;
+    width: 100%;
+    min-width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page_content {
+    position: relative;
+    height: 675px;
+    width: 675px;
+}
+
+#petLookupContent {
+    background-color: rgba(255, 255, 255, 0.74);
+    border-radius: 50%;
+    border: 1px solid #b68bf4;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 0px 20px white;
+}
+
+/* Pet Top */
+#petTop {
+    transform: translateY(-20px);
+}
+
+/* Pet Header */
+.pet--header {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    transform: translateY(20px);
+    font-family: 'Alice in Wonderland', sans-serif;
+}
+
+#petTop h2::after {
+    content: "Why, sometimes I've believed as many as six impossible things before breakfast.";
+    display: block;
+    font-size: 23px;
+    font-family: 'Alice in Wonderland', sans-serif;
+    font-weight: lighter;
+    transform: translateY(10px);
+}
+
+.pet--name {
+    color: rgb(239, 131, 149);
+    font-size: 5rem;
+    line-height: .8;
+    display: block;
+}
+
+#petInfo {
+    transform: translateX(-30px);
+}
+
+#petImage {
+    display: flex;
+    flex-direction: column;
+}
+
+.pet--image {
+    margin-top: 20px;
+    content: url('https://i.imgur.com/dxtGv13.png');
+}
+
+.pet--statsheader, .pet--jobsheader, .pet--recordheader {
+    font-family: 'Alice in Wonderland', sans-serif;
+    font-size: 24px;
+    color: rgb(239, 131, 149);
+}
+
+#petStats {
+    background-color: transparent;
+    line-height: 1.5;
+}
+
+/* Pet Links */
+#petLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    position: absolute;
+    right: 70px;
+    height: 180px;
+}
+
+.pet--neomailimg {
+    content: url('https://i.imgur.com/ty9XGtL.png');
+    width: 50px;
+    height: 50px;
+}
+
+.pet--petpageimg {
+    content: url('https://i.imgur.com/dV9eCcG.png');
+    width: 50px;
+    height: 50px;
+}
+
+#petLinks a:nth-child(1)::before {
+    content: 'Neomail';
+}
+
+#petLinks a:nth-child(1)::after {
+    content: 'Owner';
+}
+
+#petLinks a:nth-child(2)::before {
+    content: 'Visit Pets';
+}
+
+#petLinks a:nth-child(2)::after {
+    content: 'Webpage';
+}
+
+#petLinks a:nth-child(1)::before, #petLinks a:nth-child(1)::after,
+#petLinks a:nth-child(2)::before, #petLinks a:nth-child(2)::after {
+    display: block;
+    font-size: .8rem;
+    color: rgb(239, 131, 149);
+}
+
+/* Battle Stats */
+#petBattle {
+    position: absolute;
+    left: 125px;
+    top: 390px;
+}
+
+/* Set Leave Button */
+#sb_top {
+    background-image: none !important;
+    height: 0;
+    width: 0;
+}
+
+#homepage_link {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+}
+
+#homepage_link a {
+    width: 350px;
+    display: block;
+}
+
+#homepage_link a::after {
+    content: "Leave Underland";
+    position: absolute;
+    left: 0;
+    font-family: 'Alice in Wonderland', sans-serif;
+    font-size: 3rem;
+    color: white;
+}
+
+#page_event {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+

@@ -1,0 +1,256 @@
+@import url(https://fonts.googleapis.com/css2?family=Short+Stack);
+
+/* Hidden */
+
+#sb_top,
+#sb_clock,
+#sb_search,
+#sb_banner,
+#sb_lang,
+#page_banner,
+#aio_sidebar_placeholder,
+.gallery-item-qty,
+span,
+hr,
+#sb_side {
+    display: none;
+}
+
+/* General Layout */
+
+* {
+    font-family: Short Stack, cursive;
+    text-decoration: none;
+    text-align: center;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+a, .link {
+    cursor: url(http://www.rw-designer.com/cursor-view/2109.png), auto !important;
+}
+
+body {
+    background-color: #f3cfdd;
+    min-height: 100% !important;
+    cursor: url(https://www.zingerbug.com/cursors/cursors/blue_teddy_bear.gif), auto !important;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    /* height: 100%; */
+    width: 100%;
+}
+
+#page_content {
+    /* height: 100%; */
+    width: 100%;
+}
+
+/* Gallery Selector */
+
+#galCats {
+    margin: 15px 0;
+    width: 1800px;
+    transform: translateX(100px);
+    display: flex;
+    justify-content: center;
+}
+
+.links-flex {
+    margin: 0 20px;
+}
+
+.gallery-title {
+    background-color: #bbd0ff;
+    padding: 10px 15px 8px;
+    border: 2px solid #c8b6ff;
+    /* border-radius: 10px; */
+    font-weight: 700;
+}
+
+/* Headers */
+
+#galleryContent {
+    position: relative;
+    margin-top: 50px;
+    max-width: 1700px;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 200px 700px 700px;
+    column-gap: 50px;
+    grid-template-rows: 350px 575px 50px;
+    grid-template-areas: 
+        'nav gallery keeper'
+        'nav gallery categories'
+        'nav . report';
+    transform: translateX(100px);
+}
+
+#galleryKeeper {
+    grid-area: keeper;
+}
+
+.gallerykeeper-img {
+    background-image: url('https://i.imgur.com/qMfxYcP.png');
+    /* background-image: url('https://i.imgur.com/Qmahwuj.png'); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 0;
+    height: 0;
+    padding: 150px;
+}
+
+#galleryCategories {
+    grid-area: categories;
+    align-self: center;
+}
+
+#galleryCategories > p {
+    margin: 10px;
+}
+
+.normal {
+    background-color: #bbd0ff;
+    padding: 2px 15px;
+    margin: 0 1px;
+    border: 2px solid #c8b6ff;
+    /* border-radius: 10px; */
+    line-height: 2.2;
+    color: #6447ba;
+}
+
+#gallery_items {
+    width: min-content;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,140px);
+    overflow-wrap: break-word;
+    align-items: start;
+    gap: 3px;
+    margin: auto;
+    font-size: 12px;
+    background-color: white;
+    padding: 50px;
+    height: 90%;
+    overflow-y: scroll;
+    grid-area: gallery;
+    scrollbar-color: #c8b6ff #bbd0ff;
+    scrollbar-width: thin;
+    margin-right: 10px;
+    opacity: .7;
+    box-shadow: 0 5px 9px 5px #faa7ce;
+    align-content: start;
+}
+
+.gallery_item {
+    display: inline-block;
+}
+
+.med-image {
+    border: none;
+}
+
+.gallery-item-name {
+    font-size: 16px;
+}
+
+.gallery-item-info {
+    margin: 5px 0;
+}
+
+#galleryDesc {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    transform: translate(30px, 50px);
+    padding-right: 20px;
+}
+
+#galleryInfo {
+    grid-area: report;
+    align-self: center;
+}
+
+.nav_item {
+    margin: 10px 0;
+    padding: 5px 15px;
+    background-color: white;
+    opacity: 0.7;
+    border: 2px solid #faa7ce;
+}
+
+.nav_item:nth-child(odd) {
+    transform: translateX(10px);
+}
+
+.credit {
+    transform: translateY(200px);
+    background-color: #bbd0ff;
+    padding: 5px;
+    border: 2px solid #c8b6ff;
+    color: white;
+    font-size: 19px;
+    width: 140px;
+}
+
+.credit > a {
+    color: #6447ba;
+}
+
+/* Sidebar */
+
+.block { 
+    display: block;
+    margin: 20px 0;
+}
+
+/* Page Footer */
+
+#page_footer {
+    width: 1700px;
+    transform: translateX(100px);
+ }
+
+#footer_content > p {
+    font-size: 16px;
+}
+
+.purple {
+    font-size: 16px;
+}
+
+#footer_content > p > a {
+    font-size: 16px;
+}
+
+#footer_content {
+    margin: 50px auto 0;
+}
+
+/* Page Event */
+
+#page_event {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    z-index: 1;
+    opacity: .9;
+}
+
+.page_event > div {
+    border: 2px solid #faa7ce;
+}
+
+.re_shh {
+    background-color: transparent;
+}
+
+.re_text > span {
+    display: block;
+}
