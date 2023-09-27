@@ -1,45 +1,275 @@
-#userLookupLinks {
-  width: 500px;
-  flex-wrap: wrap;
-  background-color: #FFA5E6;
-  padding: 20px 170px 20px 20px;
-  box-sizing: border-box;
+/* Hidden Content */
+#sb_top,
+#sb_side,
+#page_banner,
+.ul--header,
+hr,
+#aio_sidebar_placeholder {
+    display: none;
 }
-.ul__link {
-  width: 80px;
-  margin: 10px;
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
 }
+
+/* Page Layout */
+body {
+  background-color: #F7B9D0;
+}
+
+#container {
+  width: fit-content;
+  display: block;
+
+}
+
+#page_content {
+  width: 100%;
+  min-width: 1200px;
+  margin: 100px auto 50px;
+}
+
 #userLookupContent {
   display: grid;
   grid-template-columns: 500px 600px;
-  grid-template-areas: 'info         .   ' 'info         desc' 'info         desc' 'info         desc' 'links        pets' 'guilds       pets' 'sitetrophies pets' 'gametrophies pets' 'report report';
+  grid-template-areas: 
+    'info         intro' 
+    'info         about' 
+    'links        about' 
+    'links        about' 
+    'guilds       pets' 
+    'sitetrophies pets' 
+    'gametrophies pets' 
+    'report       report';
   gap: 30px;
+  position: relative;
+  margin: 0;
 }
+
+#userLookupContent > div {
+  background-color: #FFA5E6;
+  padding: 20px;
+}
+
+/* User Info */
+#userLookupInfo {
+  position: relative;
+  display: block;
+}
+
+#userLookupShield {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#userLookupShield::before {
+  content: 'Kitten';
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  text-align: left;
+  padding-left: 0 0 10px 10px;
+}
+
+.ul--shield {
+  content: url('https://i.imgur.com/mMOxqSN.jpg');
+  width: 250px;
+}
+
+#userLookupText {
+  position: absolute;
+  right: 0;
+  top: 70px;
+  font-size: .8rem;
+}
+
+.ul--startdate {
+  display: none;
+}
+
+/* Links */
+#userLookupLinks {
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 500px;
+  background-color: #FFA5E6;
+  padding: 20px 40px !important;
+  box-sizing: border-box;
+}
+
+.ul--linkimg,
+.ul--linktext {
+  display: none;
+}
+
+.ul__neofriend,
+.ul--neofriendimg {
+  display: block;
+}
+
+.ul__link {
+  font-size: 1rem;
+  width: fit-content;
+}
+
+.ul__link > a {
+  color: white;
+}
+
+.ul__trades > a::before {
+  content: "Kitten's Trading Post";
+}
+ 
+.ul__auctions > a::before {
+  content: "Kitten's Auctions";
+}
+ 
+.ul__wishlist > a::before {
+  content: "Kitten's Wishlist";
+}
+ 
+.ul__scores > a::before {
+  content: "Kitten's HiScores";
+}
+ 
+.ul__neomail > a::before {
+  content: "Send Message";
+}
+ 
+.ul__neofriend {
+  position: relative;
+}
+
+.ul__neofriend::before {
+  content: 'Add Friend';
+  font-weight: 700;
+  color: white;
+}
+
+.ul__neofriend > form {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.ul--neofriendimg {
+  height: 0;
+  padding: 10px 0;
+  width: 85px;
+}
+ 
+
+
+/* Grid Areas */
 #userLookupSiteTrophies {
   grid-area: sitetrophies;
 }
+
 #userLookupGameTrophies {
   grid-area: gametrophies;
 }
+
 #userLookupPets {
   grid-area: pets;
 }
+
 #userLookupInfo {
   grid-area: info;
+  height: 300px;
 }
+
 #userLookupLinks {
   grid-area: links;
+  height: 200px;
 }
-#userLookupContent > div {
-  background-color: #FFA5E6;
-}
-#userLookupDesc {
-  grid-area: desc;
-}
+
 #userReportBlock {
   grid-area: report;
 }
-.ul--shield {
-  content: url('https://i.imgur.com/mMOxqSN.jpg');
-  width: 300px;
+
+/* Description */
+#userLookupDesc {
+  display: contents;
+}
+
+.intro_container, .about_container {
+  background-color: #FFA5E6;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.intro_container {
+  grid-area: intro;
+}
+
+.about_container {
+  grid-area: about;
+}
+
+.about_header {
+  margin-bottom: 10px;
+}
+
+/* Nav */
+#nav {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+}
+
+#nav > a {
+  margin: 0 20px;
+}
+
+/* Pets */
+.ul--petsheader {
+  position: relative;
+  text-align: left;
+}
+
+.ul--petsheader > strong {
+  display: none;
+}
+
+.ul--petsheader::before {
+  content: 'Kitten has 53 pets.';
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.ul--petsheader::after {
+  content: '';
+}
+
+.ul__pet {
+  width: 135px;
+}
+
+.ul--petimg {
+  padding: 5px;
+  background-color: white;
+  border: 1px solid black;
+  transition-duration: .5s;
+}
+
+.ul--petimg:hover {
+  filter: brightness(1.2);
+  transition-duration: .5s;
+}
+
+.ul--petname {
+  margin: 5px 0 10px 0;
+  font-size: .8rem;
+  color: #222933;
+  transition-duration: .5s;
+}
+
+.ul--pet:hover {
+  transition-duration: .5s;
 }
