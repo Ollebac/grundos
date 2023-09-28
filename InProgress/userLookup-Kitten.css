@@ -4,44 +4,54 @@
 #page_banner,
 .ul--header,
 hr,
-#aio_sidebar_placeholder {
-    display: none;
+#aio_sidebar_placeholder,
+#page_footer {
+  display: none;
 }
 
 /* Resets */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Page Layout */
 body {
-  background-color: #F7B9D0;
+  background: url('https://i.imgur.com/Pi6KSUX.png');
+  background-size: contain;
 }
 
 #container {
-  width: fit-content;
+  width: 100%;
   display: block;
+}
 
+#container::before {
+  content: ' ';
+  height: 50px;
+  width: 100%;
+  background-color: #ffaade;
+  display: block;
+  position: absolute;
 }
 
 #page_content {
-  width: 100%;
-  min-width: 1200px;
+  width: fit-content;
   margin: 100px auto 50px;
 }
 
 #userLookupContent {
   display: grid;
   grid-template-columns: 500px 600px;
-  grid-template-areas: 
-    'info         intro' 
-    'info         about' 
-    'links        about' 
-    'links        about' 
-    'guilds       pets' 
-    'sitetrophies pets' 
-    'gametrophies pets' 
+  grid-template-areas:
+    'info         intro'
+    'info         about'
+    'links        about'
+    'links        about'
+    'guilds       pets'
+    'sitetrophies pets'
+    'gametrophies pets'
+    '.            pets'
     'report       report';
   gap: 30px;
   position: relative;
@@ -49,14 +59,21 @@ body {
 }
 
 #userLookupContent > div {
-  background-color: #FFA5E6;
+  background-color: #ffaade;
   padding: 20px;
+  margin: auto;
+  box-sizing: border-box;
+  border: 2px solid white;
+  opacity: 0.9;
 }
 
 /* User Info */
 #userLookupInfo {
   position: relative;
   display: block;
+  grid-area: info;
+  height: 300px;
+  width: 100%;
 }
 
 #userLookupShield {
@@ -71,33 +88,137 @@ body {
   font-weight: 700;
   display: block;
   text-align: left;
-  padding-left: 0 0 10px 10px;
+  padding: 0 0 10px 20px;
 }
 
 .ul--shield {
   content: url('https://i.imgur.com/mMOxqSN.jpg');
   width: 250px;
+  border: 2px solid white;
 }
 
 #userLookupText {
   position: absolute;
-  right: 0;
+  right: 25px;
   top: 70px;
-  font-size: .8rem;
+  font-size: 0.8rem;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
 }
 
 .ul--startdate {
   display: none;
 }
 
+.ul--activedate {
+  order: 4;
+  margin-top: 30px;
+}
+
+.ul--sitethemes {
+  margin-top: 53px;
+}
+
+.ul--shop {
+  position: absolute;
+  left: -255px;
+  bottom: -35px;
+  font-size: 0;
+}
+
+.ul--shop::before {
+  content: 'View My: ';
+  color: black;
+  font-size: 1rem;
+}
+
+.ul--shop > a {
+  color: transparent;
+  width: 42px;
+  height: 20px;
+  position: absolute;
+}
+
+.ul--shop > a::before {
+  content: 'Shop';
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.ul--neodeck {
+  position: absolute;
+  left: -140px;
+  bottom: -35px;
+  font-size: 0;
+}
+
+.ul--neodeck::before,
+.ul--neodeck::after {
+  content: ' | ';
+  color: black;
+  font-size: 1rem;
+}
+
+.ul--neodeck::after {
+  margin-left: 41px;
+}
+
+.ul--neodeck > a {
+  color: transparent;
+  width: 42px;
+  height: 20px;
+  position: absolute;
+}
+
+.ul--neodeck > a::before {
+  content: 'Deck';
+  color: white;
+  font-weight: 700px;
+  font-size: 1rem;
+}
+
+.galleries--list {
+  list-style: none;
+  position: absolute;
+  bottom: -42px;
+  left: -67px;
+}
+
+.ul--galleries > span {
+  display: none;
+}
+
+.galleries--list > li {
+  font-size: 0;
+}
+
+.galleries--list > li > a {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.ul--activedate > span > strong {
+  font-size: 0;
+}
+
+.ul--activedate > span::before {
+  content: 'Last Seen';
+  font-weight: 700;
+}
+
 /* Links */
 #userLookupLinks {
-  flex-direction: column;
-  justify-content: space-evenly;
+  grid-area: links;
+  height: 123px;
   width: 500px;
-  background-color: #FFA5E6;
   padding: 20px 40px !important;
-  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 20px);
+  grid-row-gap: 10px;
+  grid-column-gap: 60px;
 }
 
 .ul--linkimg,
@@ -119,26 +240,30 @@ body {
   color: white;
 }
 
+.ul__link > a::before {
+  color: #004599;
+}
+
 .ul__trades > a::before {
   content: "Kitten's Trading Post";
 }
- 
+
 .ul__auctions > a::before {
   content: "Kitten's Auctions";
 }
- 
+
 .ul__wishlist > a::before {
   content: "Kitten's Wishlist";
 }
- 
+
 .ul__scores > a::before {
   content: "Kitten's HiScores";
 }
- 
+
 .ul__neomail > a::before {
-  content: "Send Message";
+  content: 'Send Message';
 }
- 
+
 .ul__neofriend {
   position: relative;
 }
@@ -146,7 +271,7 @@ body {
 .ul__neofriend::before {
   content: 'Add Friend';
   font-weight: 700;
-  color: white;
+  color: #004599;
 }
 
 .ul__neofriend > form {
@@ -160,8 +285,6 @@ body {
   padding: 10px 0;
   width: 85px;
 }
- 
-
 
 /* Grid Areas */
 #userLookupSiteTrophies {
@@ -176,31 +299,20 @@ body {
   grid-area: pets;
 }
 
-#userLookupInfo {
-  grid-area: info;
-  height: 300px;
-}
-
-#userLookupLinks {
-  grid-area: links;
-  height: 200px;
-}
-
-#userReportBlock {
-  grid-area: report;
-}
-
 /* Description */
 #userLookupDesc {
   display: contents;
 }
 
-.intro_container, .about_container {
-  background-color: #FFA5E6;
+.intro_container,
+.about_container {
+  background-color: #ffaade;
   box-sizing: border-box;
   padding: 20px;
   text-align: left;
   line-height: 1.6;
+  border: 2px solid white;
+  opacity: 0.9;
 }
 
 .intro_container {
@@ -240,7 +352,7 @@ body {
 .ul--petsheader::before {
   content: 'Kitten has 53 pets.';
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 
 .ul--petsheader::after {
@@ -255,21 +367,161 @@ body {
   padding: 5px;
   background-color: white;
   border: 1px solid black;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 .ul--petimg:hover {
   filter: brightness(1.2);
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 .ul--petname {
   margin: 5px 0 10px 0;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: #222933;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 .ul--pet:hover {
-  transition-duration: .5s;
+  transition-duration: 0.5s;
+}
+
+/* Guilds */
+.guilds_container {
+  grid-area: guilds;
+  width: 500px;
+  height: 150px;
+  background-color: #ffaade;
+  padding: 20px 40px !important;
+  box-sizing: border-box;
+  opacity: 0.9;
+  border: 2px solid white;
+  text-align: left;
+}
+
+.guilds_header {
+  font-size: 1.1rem;
+}
+
+.ul--guilds {
+  position: absolute;
+  left: -230px;
+  bottom: -320px;
+  font-size: 1rem;
+}
+
+.ul--guilds > span {
+  font-size: 0;
+}
+
+/* Trophies */
+#userLookupSiteTrophies,
+#userLookkupGameTrophies {
+  width: 100%;
+}
+
+.ul--sitetrophyimg,
+.ul--gametrophyimg {
+  padding: 5px;
+  background-color: white;
+  border: 1px solid black;
+  transition-duration: 0.5s;
+}
+
+.ul--sitetrophyimg:hover,
+.ul--gametrophyimg:hover {
+  filter: brightness(1.2);
+  transition-duration: 0.5s;
+}
+
+.ul__sitetrophy,
+.ul__gametrophy {
+  width: 140px;
+}
+
+.ul--sitetrophyname,
+.ul--gametrophyname {
+  margin: 5px 0 10px 0;
+  font-size: 0.8rem;
+  color: #222933;
+}
+
+.ul__kad_level_3 > strong {
+  margin: 2px 0;
+}
+
+/* Stamps and Avatars */
+.ul__avatars {
+  position: absolute;
+  left: 290px;
+  top: 130px;
+  display: flex;
+}
+
+.ul__stamps {
+  position: absolute;
+  left: 290px;
+  top: 146px;
+  display: flex;
+}
+
+.ul__avatars > a::before {
+  content: 'Avatars';
+  font-size: 0.8rem;
+  color: #004599;
+}
+
+.ul__stamps > a::before {
+  content: 'Stamps';
+  font-size: 0.8rem;
+  color: #004599;
+}
+
+.ul__avatars > a::before:hover .ul__stamps > a::before:hover {
+  color: black;
+}
+
+.ul--collectionslabel,
+.ul--avatarsimg,
+.ul--stampsimg {
+  display: none;
+}
+
+.ul--avatarstext,
+.ul--stampstext {
+  font-size: 0.8rem;
+  transform: translateY(3px);
+}
+
+.ul--avatarstext::before,
+.ul--stampstext::before {
+  content: ' : ';
+  padding-left: 4px;
+}
+
+/* Report */
+#userReportBlock {
+  grid-area: report;
+  border: unset !important;
+  background-color: unset !important;
+}
+
+#report {
+  margin-right: 30px;
+}
+
+.ul--button {
+  color: white;
+}
+
+@media screen and (max-width: 1130px) {
+  #container::before {
+    display: none;
+  }
+
+  #nav {
+    background-color: #ffaade;
+    padding: 20px 0 15px;
+    top: -120px;
+  }
 }
