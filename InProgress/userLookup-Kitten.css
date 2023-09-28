@@ -1,3 +1,30 @@
+/* START OF EDITABLE CONTENT */
+
+/* Song: Change audio src in the HTML. Change the text before the song here. */
+.audio_container::before {
+  content: 'Song: Toxic (Britney Spears)';
+}
+
+/* Font: Add your preferred font to the front. Try to keep multiple fonts in case the browser doesn't support your first pick. */
+/* Cursor: Change the cursor url. */
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  cursor: url('https://i.imgur.com/6OBDvcO.png'), auto;
+}
+
+/* Change cursor when hovering over links */
+a, .ul--neofriendimg {
+  cursor: url('https://i.imgur.com/vvprYVv.png'), auto;
+}
+
+
+
+/* The guilds are manually positioned. In the case you get more trophies, you may need to push 
+   the guild list further down. Make the below number more negative to push the content down. */
+.ul--guilds {
+  bottom: -1220px;
+}
+
 /* Hidden Content */
 #sb_top,
 #sb_side,
@@ -17,7 +44,8 @@ hr,
 
 /* Page Layout */
 body {
-  background: url('https://i.imgur.com/Pi6KSUX.png');
+  background: url('https://i.imgur.com/ZmEBpLd.jpg');
+  background: url('https://i.imgur.com/cwzkPU3.jpg');
   background-size: contain;
 }
 
@@ -48,9 +76,10 @@ body {
     'info         about'
     'links        about'
     'links        about'
-    'guilds       pets'
+    'audio        pets'
     'sitetrophies pets'
     'gametrophies pets'
+    'guilds       pets'
     '.            pets'
     'report       report';
   gap: 30px;
@@ -134,15 +163,14 @@ body {
 }
 
 .ul--shop > a {
-  color: transparent;
   width: 42px;
   height: 20px;
   position: absolute;
+  color: white
 }
 
 .ul--shop > a::before {
   content: 'Shop';
-  color: white;
   font-weight: 700;
   font-size: 1rem;
 }
@@ -166,15 +194,18 @@ body {
 }
 
 .ul--neodeck > a {
-  color: transparent;
+  color: white;
   width: 42px;
   height: 20px;
   position: absolute;
 }
 
+.ul--neodeck > a:hover {
+  color: black;
+}
+
 .ul--neodeck > a::before {
   content: 'Deck';
-  color: white;
   font-weight: 700px;
   font-size: 1rem;
 }
@@ -182,8 +213,9 @@ body {
 .galleries--list {
   list-style: none;
   position: absolute;
-  bottom: -42px;
-  left: -67px;
+  bottom: -35px;
+  left: -70px;
+  display: flex;
 }
 
 .ul--galleries > span {
@@ -194,9 +226,23 @@ body {
   font-size: 0;
 }
 
+.galleries--list > li:nth-child(1)::after {
+  content: ' | ';
+  font-size: 1rem;
+  margin: 0 4px;
+}
+
 .galleries--list > li > a {
   color: white;
   font-size: 0.9rem;
+}
+
+.galleries--list > li > a:hover {
+  color: black;
+}
+
+.ul--shop > a:hover {
+  color: black;
 }
 
 .ul--activedate > span > strong {
@@ -214,76 +260,50 @@ body {
   height: 123px;
   width: 500px;
   padding: 20px 40px !important;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, 20px);
-  grid-row-gap: 10px;
-  grid-column-gap: 60px;
-}
-
-.ul--linkimg,
-.ul--linktext {
-  display: none;
-}
-
-.ul__neofriend,
-.ul--neofriendimg {
-  display: block;
 }
 
 .ul__link {
-  font-size: 1rem;
-  width: fit-content;
+  width: 75px;
 }
 
-.ul__link > a {
-  color: white;
+.ul--linkimg {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+  transition-duration: .5s;
 }
 
-.ul__link > a::before {
-  color: #004599;
+.ul--linkimg:hover {
+  filter: brightness(1.2);
+  transition-duration: .5s;
 }
 
-.ul__trades > a::before {
-  content: "Kitten's Trading Post";
+.ul--tradesimg {
+  content: url('https://i.imgur.com/IVx25bb.png')
 }
 
-.ul__auctions > a::before {
-  content: "Kitten's Auctions";
+.ul--auctionsimg {
+  content: url('https://i.imgur.com/vOFDL47.png')
 }
 
-.ul__wishlist > a::before {
-  content: "Kitten's Wishlist";
+.ul--wishlistimg {
+  content: url('https://i.imgur.com/mzHzNpg.png')
 }
 
-.ul__scores > a::before {
-  content: "Kitten's HiScores";
+.ul--scoresimg {
+  content: url('https://i.imgur.com/Pt6OJFj.png')
 }
 
-.ul__neomail > a::before {
-  content: 'Send Message';
-}
-
-.ul__neofriend {
-  position: relative;
-}
-
-.ul__neofriend::before {
-  content: 'Add Friend';
-  font-weight: 700;
-  color: #004599;
-}
-
-.ul__neofriend > form {
-  position: absolute;
-  left: 0;
-  top: 0;
+.ul--neomailimg {
+  content: url('https://i.imgur.com/rwwHJGH.png')
 }
 
 .ul--neofriendimg {
-  height: 0;
-  padding: 10px 0;
-  width: 85px;
+  content: url('https://i.imgur.com/rrteXL7.png')
+}
+
+.ul__neofriend > div {
+  transform: translateY(5px);
 }
 
 /* Grid Areas */
@@ -325,6 +345,22 @@ body {
 
 .about_header {
   margin-bottom: 10px;
+}
+
+/* Audio */
+.audio_container {
+  grid-area: audio;
+  background-color: #ffaade;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 2px solid white;
+  opacity: 0.9;
+}
+
+.audio_container::before {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
 /* Nav */
@@ -406,7 +442,6 @@ body {
 .ul--guilds {
   position: absolute;
   left: -230px;
-  bottom: -320px;
   font-size: 1rem;
 }
 
@@ -428,7 +463,6 @@ body {
   transition-duration: 0.5s;
 }
 
-.ul--sitetrophyimg:hover,
 .ul--gametrophyimg:hover {
   filter: brightness(1.2);
   transition-duration: 0.5s;
@@ -453,14 +487,14 @@ body {
 /* Stamps and Avatars */
 .ul__avatars {
   position: absolute;
-  left: 290px;
+  left: 285px;
   top: 130px;
   display: flex;
 }
 
 .ul__stamps {
   position: absolute;
-  left: 290px;
+  left: 285px;
   top: 146px;
   display: flex;
 }
@@ -468,13 +502,11 @@ body {
 .ul__avatars > a::before {
   content: 'Avatars';
   font-size: 0.8rem;
-  color: #004599;
 }
 
 .ul__stamps > a::before {
   content: 'Stamps';
   font-size: 0.8rem;
-  color: #004599;
 }
 
 .ul__avatars > a::before:hover .ul__stamps > a::before:hover {
@@ -511,7 +543,7 @@ body {
 }
 
 .ul--button {
-  color: white;
+  color: red;
 }
 
 @media screen and (max-width: 1130px) {
