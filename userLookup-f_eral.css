@@ -1,0 +1,371 @@
+@import url('https://fonts.cdnfonts.com/css/nintendo-switch-ui');
+
+/* Hidden Content */
+#sb_top,
+#sb_side,
+#page_banner,
+.ul--header,
+hr,
+#aio_sidebar_placeholder,
+#page_footer {
+    display: none;
+}
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Layout */
+html {
+    height: 100vh;
+}
+
+body {
+    background: url('https://i.imgur.com/KaEagne.jpg');
+    background-size: cover;
+    font-family: 'Nintendo Switch UI', sans-serif;
+    height: 100%;
+}
+
+#container {
+    width: 1400px;
+    height: 100%;
+    display: flex;
+    margin: auto;
+}
+
+#page_content {
+    width: fit-content;
+    margin: auto;
+    background-color: #e8e8e8;
+    border: 3px solid black;
+    border-radius: 0 80px;
+    padding: 20px;
+}
+
+#userLookupContent {
+    display: grid;
+    grid-template-columns: 650px 650px;
+    grid-template-rows: 480px 105px;
+    grid-template-areas:
+        'menu content'
+        'menu links';
+    gap: 20px 60px;
+    margin: 0;
+    position: relative;
+}
+
+/* Allow Scrolling */
+#userPetList, #gameTrophiesList {
+    overflow-y: scroll;
+    height: 390px;
+    scrollbar-width: thin;
+    margin-right: 10px;
+}
+
+#userLookupInfo {
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+/* Nav Menu */
+#nav_container {
+    position: relative;
+    width: fit-content;
+}
+
+.controller_menu {
+    width: 650px;
+}
+
+.lightpurple_button, .darkpurple_button {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    background-color: #A89DE2;
+    box-shadow: 1px 2px 1px black;
+}
+
+.darkpurple_button {
+    background-color: #3A2D73;
+}
+
+.lightpurple_button:hover, .darkpurple_button:hover {
+    box-shadow: none;
+    transform: translate(1px, 2px);
+}
+
+#nav_info {
+    top: 138px;
+    right: 271px;
+}
+
+#nav_pets {
+    top: 101px;
+    right: 224px;
+}
+
+#nav_sitetrophies {
+	top: 138px;
+	right: 176px;
+}
+
+#nav_gametrophies {
+    top: 175px;
+    right: 223px;
+}
+
+.start_button {
+    width: 40px;
+    height: 14px;
+    background-color: #27262B;
+    border-radius: 20px;
+    position: absolute;
+    transform: rotate(-36deg);
+    box-shadow: -1px 2px 1px black;
+}
+
+.start_button:hover {
+    box-shadow: none;
+    transform: rotate(-36deg) translate(1px, 2px);
+}
+
+#nav_css {
+    top: 169px;
+    left: 196px;
+}
+
+#nav_exit {
+    top: 169px;
+    left: 251px;
+}
+
+/* User Description */
+#userLookupDesc {
+    margin: 0;
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about_container {
+    width: 500px;
+}
+
+.audio_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lupes_icon {
+    margin-left: 30px;
+}
+
+.get_started {
+    position: absolute;
+    right: 170px;
+    top: 200px;
+    z-index: 0;
+}
+
+/* User Info */
+#userLookupInfo {
+    grid-template-areas: 
+        'text shield'
+        'text shield'
+        'text collections';
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    border: 2px solid #8563B5;
+    background-color: whitesmoke;
+    grid-row-gap: 30px;
+    border-top-right-radius: 80px;
+}
+
+.guilds--list {
+    margin-left: 20px;
+}
+
+#userLookupText {
+    font-size: .9rem;
+    line-height: 1.8;
+}
+
+#userLookupShield {
+    text-align: center;
+}
+
+.ul--shield {
+    content: url('https://i.imgur.com/9sFxcIy.png');
+    width: 180px;
+}
+
+#userLookupCollections {
+    flex-direction: row;
+    justify-content: space-around;
+    transform: translateX(-15px);
+}
+
+.ul--avatarsimg, .ul--stampsimg {
+    margin-bottom: 10px;
+}
+
+/* Links */
+#userLookupLinks {
+    grid-area: links;
+    padding: 20px;
+    border: 2px solid #8563B5;
+    background-color: whitesmoke;
+    border-bottom-left-radius: 20px;
+}
+
+.ul--linkimg {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 5px;
+    transition-duration: .5s;
+}
+
+.ul--linkimg:hover, .ul--neofriendimg:hover {
+    filter: brightness(1.2);
+    transform: scale(1.1);
+    transition-duration: .5s;
+}
+
+.ul--tradesimg {
+    content: url('https://i.imgur.com/AJwkR00.png');
+}
+
+.ul--auctionsimg {
+    content: url('https://i.imgur.com/rp7rpvI.png');
+}
+
+.ul--wishlistimg {
+    content: url('https://i.imgur.com/rrhErwx.png');
+    width: 40px;
+}
+
+.ul--scoresimg {
+    content: url('https://i.imgur.com/fYbmAC4.png');
+}
+
+.ul--neomailimg {
+    content: url('https://i.imgur.com/AJle8an.png');
+}
+
+.ul--neofriendimg {
+    content: url('https://i.imgur.com/JKVA8sv.png');
+    transition-duration: .5s;
+}
+
+/* Targeting */
+
+#userLookupInfo, #userLookupPets, #userLookupSiteTrophies, #userLookupGameTrophies {
+    display: none;
+}
+
+#userLookupInfo:target {
+    display: grid;
+    grid-area: content;
+    z-index: 1;
+}
+
+#userLookupPets:target, #userLookupSiteTrophies:target, #userLookupGameTrophies:target {
+    display: block;
+    grid-area: content;
+    z-index: 1;
+}
+
+/* Neopets */
+.ul--sectionheader {
+    font-size: 1.5rem;
+}
+
+#userLookupPets {
+    padding: 20px;
+    border: 2px solid #8563B5;
+    background-color: white;
+    border-top-right-radius: 80px;
+}
+
+.ul__pet {
+    width: 100px;
+    margin: 15px 10px;
+}
+
+.ul--petimg {
+    margin-bottom: 10px;
+    transition-duration: .5s;
+}
+
+.ul--petimg:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    transition-duration: .5s;
+}
+
+/* Trophies */
+#userLookupSiteTrophies, #userLookupGameTrophies  {
+    padding: 20px;
+    border: 2px solid #8563B5;
+    background-color: white;   
+    border-top-right-radius: 80px;
+}
+
+.ul__sitetrophy, .ul__gametrophy {
+    width: 100px;
+    margin: 10px;
+}
+
+.ul--gametrophyimg {
+    transition-duration: .5s;
+}
+
+.ul--sitetrophyimg, .ul--gametrophyimg {
+    margin-bottom: 10px;
+}
+
+.ul--gametrophyimg:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    transition-duration: .5s;
+}
+
+.ul--gametrophyname, .gamelink, .ul--sitetrophycap {
+    font-weight: normal;
+}
+
+/* Report */
+#userReportBlock {
+    position: absolute;
+    margin: 15px;
+    bottom: -20px;
+    left: 220px;
+}
+
+#report {
+    margin-right: 20px;
+    color: red;
+}
+
+#blockuser {
+    color: red;
+}
+
+#report:hover, #blockuser:hover {
+    color:#8563B5;
+}
+
+/* Page Event */
+#page_event {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
