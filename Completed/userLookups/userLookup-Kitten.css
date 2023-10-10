@@ -76,8 +76,7 @@ body {
   grid-template-areas:
     'info         intro'
     'info         about'
-    'links        about'
-    'links        about'
+    'links        pets'
     'audio        pets'
     'sitetrophies pets'
     'gametrophies pets'
@@ -347,6 +346,10 @@ body {
 
 .about_header {
   margin-bottom: 10px;
+}
+
+.about_text {
+  font-size: .9rem;
 }
 
 /* Audio */
