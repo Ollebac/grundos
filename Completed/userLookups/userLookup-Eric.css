@@ -1,0 +1,66 @@
+/* Hidden Content */
+#sb_top,
+#sb_side,
+#page_banner,
+hr,
+#aio_sidebar_placeholder,
+#page_footer {
+    display: none;
+}
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Background and General Containers */
+body {
+    background-color: black;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#container {
+    background: url('https://cdn.discordapp.com/attachments/1153761698738610207/1162168982380478635/3cc5615cd72d5faf4ce3e9fe605bf240.gif?ex=653af535&is=65288035&hm=4356e5f5edf35e3f9d9d1c673a3331c033e48a72b14cbb68c0fb3c4ee08b5694&');
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: ;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    display: contents;
+}
+
+#page_content {
+    width: 100%;
+}
+
+#userLookupContent {
+    height: 90%;
+}
+
+#userLookupContent > div {
+    width: 800px;
+    margin: auto;
+    background-color: #A1E4F9;
+    border-radius: 30px;
+    overflow-y: scroll;
+    padding: 30px;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+html {
+    height: 100vh;
+    /*! min-height: 1000px; */
+}
