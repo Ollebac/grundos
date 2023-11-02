@@ -1,0 +1,351 @@
+/* Hidden Content */
+#sb_top,
+#sb_side,
+#page_banner,
+.ul--header,
+hr,
+#aio_sidebar_placeholder,
+#page_footer {
+    display: none;
+}
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1300px;
+    min-height: 900px;
+    height: 100%;
+}
+
+body {
+    background: url(https://i.imgur.com/5tuwB9X.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#container {
+    display: contents;
+}
+
+#page_content {
+    opacity: 1;
+    width: 1280px;
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.88);
+    height: 700px;
+    border-radius: 20px;
+    border: 3px solid #db377e;
+}
+
+#userLookupContent {
+    height: 600px;
+    width: 650px;
+    overflow-y: scroll;;
+    scrollbar-width: none;
+    background-color: transparent;
+    border-radius: 30px;
+    margin-top: 0;
+    box-sizing: border-box;
+    padding: 0 20px;
+    line-height: 1.7;
+    font-size: 13px;
+    color: black;
+}
+
+#userLookupContent::-webkit-scrollbar {
+    display: none;
+}
+
+/* Page Event */
+#page_event {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Info */
+a {
+    color: #db377e;
+}
+
+li {
+    margin-left: 20px;
+}
+
+#userLookupInfo {
+    grid-template-areas:
+        "text shield"
+        "text collections";
+    grid-template-columns: 280px 320px;
+    margin-top: 20px;
+    row-gap: 20px;
+}
+
+#userLookupShield {
+    text-align: center;
+}
+
+.ul--shield {
+    content: url(https://i.imgur.com/huf3e36.png);
+    width: 100%;
+}
+
+#userLookupCollections {
+    flex-direction: row;
+    justify-content: space-around;
+    transform: translateX(-12px);
+    width: 250px;
+    justify-self: center;
+}
+
+.ul--avatarsimg {
+    width: 54px;
+    margin: 3px 0;
+}
+
+.ul--stampsimg {
+    content: url(https://i.imgur.com/LH3E7Ti.png);
+    width: 60px;
+}
+
+/* Links */
+#userLookupLinks {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0px 10px;
+}
+
+.ul--linktext {
+    font-weight: bold;
+}
+
+.ul--linkimg, .ul--neofriendimg {
+    height: 100px;
+    width: auto;
+    margin-bottom: 5px;
+    transition-duration: .5s;
+  }
+
+.ul--linkimg:hover, .ul--neofriendimg:hover {
+    filter: brightness(1.2);
+    transform: scale(1.1);
+    transition-duration: .5s;
+}
+
+.ul--tradesimg {
+    content: url(https://i.imgur.com/HWQojxR.png);
+}
+
+.ul--auctionsimg {
+    content: url(https://i.imgur.com/yGb3cos.png);
+}
+
+.ul--wishlistimg {
+    content: url(https://i.imgur.com/zFvFdHo.png);
+}
+
+.ul--scoresimg {
+    content: url(https://i.imgur.com/GwUobSD.png);
+    transform: scaleX(-1);
+}
+
+.ul--neomailimg {
+    content: url(https://i.imgur.com/ZUukeCo.pngg);
+    transform: scaleX(-1);
+}
+
+.ul--neofriendimg {
+    width: 0;
+    height: 0;
+    padding: 50px 35px;
+}
+
+.ul__neofriend {
+    position: relative;
+}
+
+.ul__neofriend::before {
+    content: url(https://i.imgur.com/ur1Dz37.png);
+    position: absolute;
+    left: -180px;
+    transform: scale(0.15);
+    top: -245px;
+    transition-duration: .5s;
+}
+
+.ul__neofriend::before:hover {
+    transform: scale(1.1);
+    transition-duration: .5s;
+}
+
+.ul__neofriend > div {
+    margin-top: 54px;
+}
+
+/* Description - Custom Content */
+.portrait {
+    position: absolute;
+    left: 30px;
+    width: 460px;
+    bottom: 40px;
+    transform: scaleX(-1);
+    z-index: -1;
+}
+
+.username {
+    position: absolute;
+    left: 60px;
+    font-size: 6rem;
+    font-weight: bolder;
+    color: #FDD302;    
+    text-shadow: #DB377E 3px 3px 0px;
+    top: -30px;
+}
+
+.custom_text {
+    margin-bottom: 5px;
+}
+
+/* Nav */
+#nav {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 560px;
+    background-color: #fdd302;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 3px solid #db377e;
+    box-sizing: border-box;
+}
+
+.nav_item {
+    /*! border: 3px solid #a8a8a8; */
+    border-radius: 10px;
+    padding: 10px 15px;
+    /*! background-color: #000; */
+    margin: 0 5px;
+    color: blue;
+    font-size: 1.4rem;
+}
+
+/* Pets / Trophies */
+#userLookupPets {
+    padding-top: 10px;
+    margin-top: -10px;
+}
+
+#userLookupSiteTrophies {
+    padding-top: 10px;
+    margin-top: -10px;
+}
+
+.ul__pet {
+    position: relative;
+    margin: 8px;
+    transition-duration: .5s;
+}
+
+.ul__sitetrophy {
+    position: relative;
+    margin: 0 20px;
+}
+
+.ul__gametrophy {
+    position: relative;
+    margin: 15px;
+    transition-duration: .5s;
+}
+
+.ul__pet:hover,
+.ul__gametrophy:hover {
+    filter: brightness(1.2);
+    transition-duration: .5s;
+}
+
+.ul--petname,
+.ul--sitetrophyname,
+.ul--gametrophyname {
+    margin-top: 10px;
+}
+
+.ul__pet > a:nth-child(1),
+.ul__sitetrophy > img,
+.ul__gametrophy > a {
+    background-color: white;
+    padding: 20px;
+    border-radius: 50%;
+    border: 2px solid #DB377E;
+}
+
+/* Headers */
+.ul--sectionheader {
+    font-size: 2.5rem;
+    margin: 15px 0 25px;
+    color: #FDD302;
+    text-shadow: #DB377E 3px 3px 0px;
+}
+
+.ul--sectionheader::before,
+.ul--sectionheader::after {
+    content: none;
+}
+
+/* Report Block */
+#userReportBlock {
+    margin-top: 20px;
+}
+
+#report,
+#blockuser {
+    color: red;
+    margin: 0 10px;
+}
+
+#report:hover,
+#blockuser:hover {
+    color: white;
+}
+
+/* HTML 
+
+<div id="nav">
+    <a class="nav_item" href="#userLookupDesc">About</a>
+    <a class="nav_item" href="#userLookupPets">Family</a>
+    <a class="nav_item" href="#userLookupSiteTrophies">Trophies</a>
+    <a class="nav_item" href="https://www.grundos.cafe/~Developer/">CSS</a>
+    <a class="nav_item" href="https://www.grundos.cafe">Exit</a>
+</div>
+<img src="https://i.imgur.com/6a6HgN1.png" class="portrait">
+<h2 class="username">salukidog</h2>
+<div class="custom_section">
+    <h3 class="ul--sectionheader">ABOUT ME</h3>
+    <p class="custom_text">Blah blah blah this is a custom section that you can put like whatever you want!</p>
+    <p class="custom_text">Blah blah blah heres like another paragraph or something.</p>
+</div>
+
+*/
