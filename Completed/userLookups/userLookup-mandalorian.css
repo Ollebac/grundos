@@ -1,0 +1,397 @@
+/* Hidden Content */
+#sb_top,
+#sb_side,
+#page_banner,
+.ul--header,
+hr,
+#aio_sidebar_placeholder {
+    display: none;
+}
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    animation: warp 3s ease-in 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1280px;
+    min-height: 900px;
+    height: 100%;
+}
+
+body {
+    background: url(https://i.imgur.com/EDH6njy.gif);
+    animation: space 3s ease-in 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#container {
+    display: contents;
+}
+
+#page_content {
+    opacity: 1;
+    animation: appear 3s ease-in-out 1;
+    width: 1180px;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    margin-right: 70px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    background-color: rgba(53, 53, 53, 0.6);
+    height: 700px;
+    border-radius: 0 40px 40px 40px;
+}
+
+#userLookupContent {
+    height: 600px;
+    width: 650px;
+    overflow-y: scroll;;
+    scrollbar-width: none;
+    background-color: transparent;
+    border-radius: 30px;
+    margin-top: 0;
+    box-sizing: border-box;
+    padding: 100px 40px 30px;
+    line-height: 1.7;
+    font-size: 13px;
+    color: white;
+}
+
+#userLookupContent::-webkit-scrollbar {
+    display: none;
+}
+
+/* Page Event */
+#page_event {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Info */
+a {
+    color: #d29dff;
+}
+
+li {
+    margin-left: 20px;
+}
+
+#userLookupInfo {
+    grid-template-areas:
+        "text shield"
+        "text collections";
+    grid-template-columns: 300px 260px;
+    padding-top: 120px;
+    margin-top: -120px;
+}
+
+#userLookupShield {
+    text-align: center;
+}
+
+.ul--shield {
+    content: url(https://i.imgur.com/j7nODEP.png);
+    width: 90%;
+}
+
+#userLookupCollections {
+    flex-direction: row;
+    justify-content: space-around;
+    transform: translateX(-12px);
+}
+
+.ul--avatarsimg {
+    width: 54px;
+    margin: 3px 0;
+}
+
+.ul--stampsimg {
+    content: url(https://i.imgur.com/U6zvd43.png);
+    width: 60px;
+}
+
+/* Links */
+#userLookupLinks {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0px 10px;
+}
+
+.ul--linkimg, .ul--neofriendimg {
+    height: 100px;
+    width: auto;
+    margin-bottom: 5px;
+    transition-duration: .5s;
+  }
+
+.ul--linkimg:hover, .ul--neofriendimg:hover {
+    filter: brightness(1.2);
+    transform: scale(1.1);
+    transition-duration: .5s;
+}
+
+.ul--tradesimg {
+    content: url(https://i.imgur.com/kCQUNF8.png);
+}
+
+.ul--auctionsimg {
+    content: url(https://i.imgur.com/XFHXbXq.png);
+}
+
+.ul--wishlistimg {
+    content: url(https://i.imgur.com/qLvYAMj.png);
+}
+
+.ul--scoresimg {
+    content: url(https://i.imgur.com/wr6hLoE.png);
+}
+
+.ul--neomailimg {
+    content: url(https://i.imgur.com/phBFP4x.png);
+}
+
+.ul--neofriendimg {
+    width: 0;
+    height: 0;
+    padding: 50px 35px;
+}
+
+.ul__neofriend {
+    position: relative;
+}
+
+.ul__neofriend::before {
+    content: url(https://i.imgur.com/TWH7ERi.png);
+    position: absolute;
+    left: -80px;
+    transform: scale(0.3);
+    top: -100px;
+    transition-duration: .5s;
+}
+
+.ul__neofriend::before:hover {
+    transform: scale(1.1);
+    transition-duration: .5s;
+}
+
+.ul__neofriend > div {
+    margin-top: 54px;
+}
+
+/* Description - Custom Content */
+.border_top {
+    position: absolute;
+    top: -23px;
+    right: 0;
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.border_bottom {
+    position: absolute;
+    bottom: -29px;
+    right: 0;
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.mandalorian {
+    position: absolute;
+    left: -40px;
+    width: 500px;
+    top: 20px;
+    transform: scaleX(-1);
+}
+
+/* Nav */
+#nav {
+    position: absolute;
+    top: -80px;
+    right: 0;
+    width: 650px;
+}
+
+.nav_item {
+    border: 3px solid #a8a8a8;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background-color: #000;
+    margin: 0 10px;
+}
+
+/* Pets / Trophies */
+#userLookupPets {
+    padding-top: 70px;
+    margin-top: -70px;
+}
+
+#userLookupSiteTrophies {
+    padding-top: 70px;
+    margin-top: -70px;
+}
+
+.ul__pet {
+    position: relative;
+    margin: 8px;
+    transition-duration: .5s;
+}
+
+.ul__sitetrophy {
+    position: relative;
+    margin: 0 20px;
+}
+
+.ul__gametrophy {
+    position: relative;
+    margin: 15px;
+    transition-duration: .5s;
+}
+
+.ul__pet:hover,
+.ul__gametrophy:hover {
+    filter: brightness(1.2);
+    transition-duration: .5s;
+}
+
+.ul--petname,
+.ul--sitetrophyname,
+.ul--gametrophyname {
+    margin-top: 10px;
+}
+
+.ul__pet > a:nth-child(1),
+.ul__sitetrophy > img,
+.ul__gametrophy > a {
+    background-color: white;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.ul__pet > a:nth-child(1)::before {
+    content: url(https://i.imgur.com/VMcMwcq.png);
+    position: absolute;
+    top: -8px;
+    left: -11px;
+}
+
+.ul__sitetrophy::before,
+.ul__gametrophy > a::before  {
+    content: url(https://i.imgur.com/VMcMwcq.png);
+    position: absolute;
+    top: -8px;
+    left: -21px;
+}
+
+/* Headers */
+#page_footer {
+    content: url(https://i.imgur.com/qhxRBGb.png);
+    transform: translateX(-370px);
+    width: 400px;
+    animation: appear 3s ease-in-out 1;
+}
+
+.ul--sectionheader {
+    font-size: 2rem;
+    margin: 15px 0 25px;
+}
+
+/* Report Block */
+#userReportBlock {
+    margin-top: 20px;
+}
+
+#report,
+#blockuser {
+    color: red;
+    margin: 0 10px;
+}
+
+#report:hover,
+#blockuser:hover {
+    color: white;
+}
+
+@keyframes warp {
+    0% {
+        background: url(https://cdn.discordapp.com/attachments/1153761698738610207/1164824525616197653/giphy.gif?ex=65449e60&is=65322960&hm=b57ef1476a27db43eda06096f4dc5f19b00c32ec2e5c23cb5ca0f24152a69455&);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    50% {
+        background: url(https://cdn.discordapp.com/attachments/1153761698738610207/1164824525616197653/giphy.gif?ex=65449e60&is=65322960&hm=b57ef1476a27db43eda06096f4dc5f19b00c32ec2e5c23cb5ca0f24152a69455&);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    100% {
+        background: none;
+    }
+}
+
+@keyframes space {
+    0% {
+        height: 0;
+        width: 0;
+        border-radius: 50%;
+        box-shadow: 0px 0px 55px 10px black;
+    }
+    60% {
+        height: 0;
+        width: 0;
+        border-radius: 50%;
+        box-shadow: 0px 0px 55px 20px black;
+    }
+    80% {
+        height: 100vh;
+        width: 100vh;
+        border-radius: 50%;
+        box-shadow: 0px 0px 55px 20px black;
+    }
+    100% {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* HTML 
+
+<div id="nav">
+    <a class="nav_item" href="#userLookupInfo">Info</a>
+    <a class="nav_item" href="#userLookupPets">Clan</a>
+    <a class="nav_item" href="#userLookupSiteTrophies">Trophies</a>
+    <a class="nav_item" href="https://www.grundos.cafe/~Developer/">CSS</a>
+    <a class="nav_item" href="https://www.grundos.cafe">Exit</a>
+</div>
+<img src="https://i.imgur.com/8Ya9cV3.png" class="border_top">
+<img src="https://i.imgur.com/9Shv7EU.png" class="border_bottom">
+<img src="https://i.imgur.com/EUggrpI.png" class="mandalorian">
+*/
