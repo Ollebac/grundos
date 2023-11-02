@@ -1,10 +1,11 @@
+@import url('https://fonts.cdnfonts.com/css/sandy');
+
 /* Hidden Content */
 #sb_top,
 #sb_side,
 #page_banner,
 hr,
-#aio_sidebar_placeholder,
-#page_footer {
+#aio_sidebar_placeholder {
     display: none;
 }
 
@@ -14,27 +15,54 @@ hr,
     padding: 0;
 }
 
+li {
+    margin-left: 30px;
+}
+
+.ul--sectionheader {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+/* Page Event */
+#page_event {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
 /* Background and General Containers */
+html {
+    height: 100%;
+    width: 100%;
+    min-width: 1360px;
+    scrollbar-width: none;
+}
+
 body {
-    background-color: black;
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
     letter-spacing: 1px;
     width: 100%;
     height: 100%;
+    min-height: 850px;
     box-sizing: border-box;
+    font-family: American Typewriter, serif;
+    background: url(https://cdna.artstation.com/p/assets/images/images/059/114/008/original/veera-kolkki-backgroundanimationbubbles-coral.gif?1675686071);
+    background-size: cover;
 }
 
 #container {
-    background: url('https://cdn.discordapp.com/attachments/1153761698738610207/1162168982380478635/3cc5615cd72d5faf4ce3e9fe605bf240.gif?ex=653af535&is=65288035&hm=4356e5f5edf35e3f9d9d1c673a3331c033e48a72b14cbb68c0fb3c4ee08b5694&');
-    overflow: hidden;
-    display: grid;
-    grid-template-areas: ;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+    display: flex;
+    height: 90vh;
+    min-height: 850px;
+    width: fit-content;
+    min-width: 1220px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -42,25 +70,297 @@ main {
 }
 
 #page_content {
-    width: 100%;
+    width: fit-content;
+    height: 850px;
+    position: relative;
 }
 
 #userLookupContent {
-    height: 90%;
-}
-
-#userLookupContent > div {
-    width: 800px;
-    margin: auto;
-    background-color: #A1E4F9;
+    height: 850px;
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    background-color: #7DCACA;
     border-radius: 30px;
     overflow-y: scroll;
     padding: 30px;
     box-sizing: border-box;
     scrollbar-width: none;
+    margin: 0;
+    box-shadow: 0px 0px 15px 15px #7DCACA;
 }
 
-html {
-    height: 100vh;
-    /*! min-height: 1000px; */
+/* User Description - Custom HTML */
+#userLookupDesc {
+    display: contents;
 }
+
+/* Header */
+#page_footer {
+    content: url('https://i.imgur.com/wCCns2S.png');
+    position: absolute;
+    top: 10px;
+    left: -15px;
+    width: 340px;
+    display: none;
+}
+
+.ul--header {
+    position: absolute;
+    left: -360px;
+    top: 40px;
+}
+
+.ul--header::before {
+    content: url('https://i.imgur.com/nd9iR4k.png');
+    transform: scale(0.6);
+    display: block;
+}
+
+.ul--header > span {
+    display: none;
+}
+
+/* UserlookupInfo */
+#userLookupInfo {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+     'text shield'
+     'text collections';
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.ul--shield {
+    content: url('https://i.imgur.com/ufLQBEP.png');
+    width: 300px;
+}
+
+#userLookupCollections {
+    flex-direction: row;
+    gap: 55px;
+    justify-content: center;
+}
+
+.ul--avatarstext,
+.ul--stampstext {
+    margin-top: 5px;
+}
+
+.ul--stampsimg {
+    content: url('https://i.imgur.com/JcTLyq8.png');
+    width: 56px;
+}
+
+/* Nav */
+.nav {
+    position: absolute;
+    left: -190px;
+    top: 220px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.nav > a {
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background: url('https://i.imgur.com/jxI3JQt.jpg');
+    color: #1b4f1a;
+    font-size: 1.1rem;
+}
+
+/* Links */
+#userLookupLinks {
+    position: absolute;
+    right: -140px;
+    flex-direction: column;
+    top: 100px;
+    gap: 30px;
+}
+
+.ul__link {
+    transition-duration: .5s;
+}
+
+.ul__link:hover {
+    filter: brightness(1.3);
+    transition-duration: .5s;
+}
+
+.ul--linkimg {
+    width: 60px;
+    height: 60px;
+}
+
+.ul--linktext {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: white;
+    font-weight: 600;
+}
+
+.ul__neofriend > .ul--linktext {
+    margin-top: 15px;
+}
+
+.ul--tradesimg {
+    content: url('https://i.imgur.com/cE2pkA6.png');
+}
+
+.ul--auctionsimg {
+    content: url('https://i.imgur.com/DpGnlny.png')
+}
+
+.ul--wishlistimg {
+    content: url('https://i.imgur.com/xmpDk0c.png')
+}
+
+.ul--scoresimg {
+    content: url('https://i.imgur.com/rTMK9oE.png')
+}
+
+.ul--neomailimg {
+    content: url('https://i.imgur.com/KfznP72.png')
+}
+
+.ul--neofriendimg {
+    content: url('https://i.imgur.com/5FkLy4W.png')
+}
+
+/* Pets */
+#userPetList {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+}
+
+.ul__pet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition-duration: .5s;
+}
+
+.ul__pet:hover {
+    filter: brightness(1.3);
+    transition-duration: .5s;
+}
+
+.ul__pet::before {
+    content: url('https://i.imgur.com/56ZpTr0.png');
+    position: absolute;
+    top: -33px;
+    transform: scale(0.83);
+    pointer-events: none;
+}
+
+.ul__pet > a:nth-child(1) {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.ul--petimg {
+    margin: auto;
+}
+
+.ul--petname {
+    margin: 15px 0;
+    color: purple;
+}
+
+/* Trophies */
+#userLookupSiteTrophies, 
+#userLookupGameTrophies {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 10px white;
+}
+
+#userLookupSiteTrophies {
+    border-radius: 20px 20px 0 0;
+    margin-top: 30px;
+}
+
+#userLookupGameTrophies {
+    border-radius: 0 0 20px 20px;
+    margin-top: 8px;
+}
+
+.ul--sitetrophiesheader,
+.ul--gametrophiesheader {
+    display: none;
+}
+
+#siteTrophiesList {
+    margin-top: 20px;
+}
+
+#siteTrophiesList, 
+#gameTrophiesList {
+    gap: 15px;
+}
+
+.ul__gametrophy {
+    transition-duration: .5s;
+}
+
+.ul__gametrophy:hover {
+    filter: brightness(1.3);
+    transition-duration: .5s;
+}
+
+.ul--gametrophyname {
+    margin-top: 10px;
+}
+
+#userLookupSiteTrophies::before {
+    content: '- Trophies -';
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+/* Report */
+#userReportBlock {
+    margin-top: 20px;
+}
+
+/* Custom Description */
+#about_container {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/*
+
+HTML
+
+
+<div class="nav">
+  <a href="#about_container">home</a><br>
+  <a href="#userLookupPets">neopets</a><br>
+  <a href="#userLookupSiteTrophies">trophies</a><br>
+  <a href="https://www.grundos.cafe/~Developer/">css</a><br>
+  <a href="https://www.grundos.cafe/">exit</a>
+  </div>
+<div id="about_container">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ultricies 
+    mauris, ut finibus ante. Sed ultrices dolor eget augue placerat, a iaculis risus 
+    hendrerit. Nam condimentum nibh sit amet quam mattis iaculis.
+  </p>
+</div>
+  
+*/
