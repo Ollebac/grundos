@@ -1,0 +1,226 @@
+
+
+.aio-section-header {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.aio-section-header > a {
+    color: white !important;
+    font-weight: bolder;
+}
+
+.aio-section-header > a:hover {
+    color: red !important;
+}
+
+/* Sidebar */
+#aio_sidebar_placeholder {
+    width: fit-content;
+}
+
+#aio_sidebar {
+    width: 800px;
+    text-align: center;
+    line-height: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);    
+    gap: 0;
+    grid-template-areas: 
+        "Dailies Timelies Quests Fish"
+        "Always Always Always Training"
+        "Shops Shops Shops Shops"
+        "Games Games Games Games"
+        "Edit Edit Edit Edit";
+}
+
+#aio_sidebar > div {
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    padding: 20px 10px;
+}
+
+#aio_sidebar > div {
+    grid-area: Edit;
+}
+
+.dailies {
+    grid-area: Dailies !important; 
+}
+
+.timelies {
+    grid-area: Timelies !important; 
+}
+
+.quests {
+    grid-area: Quests !important; 
+}
+
+.always {
+    grid-area: Always !important; 
+}
+
+.shops {
+    grid-area: Shops !important; 
+}
+
+.games {
+    grid-area: Games !important;
+}
+
+.fish {
+    grid-area: Fish !important; 
+}
+
+.training {
+    grid-area: Training !important; 
+
+}
+
+#aio_sidebar a {
+    color: #F6ABB6;
+}
+#aio_sidebar a:hover {
+    color: blue;
+    border-color: red;
+}
+
+#aio_sidebar small {
+    display: none;
+}
+
+#aio_sidebar .aioTxt {
+    margin-top: 3px
+}
+
+.aioImg {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 10px
+}
+
+.shops .aioImg {
+    justify-content: flex-start;
+}
+
+/* Sidebar images */
+#aio_sidebar .aioImg img {
+    border-radius: 10px;
+    border: 2px solid #F6ABB6;
+    padding: 5px;
+    background-color: white;
+}
+
+/* Sidebar Text Special Styles */
+#aio_sidebar .aioImg img:hover {
+    border: 2px solid #fef8dd;
+    transform: scale(1.1);
+}
+
+#aio_sidebar > div > a {
+    font-style: italic;
+}
+
+#aio_sidebar > .quests > .aioImg > div br {
+    display: none
+}
+
+.quests > .aioImg {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* SHOP TEXT */
+.shops > div > div > a::before {
+    font-size: 10px;
+    width: 50px;
+    display: block;
+    padding-bottom: 5px;
+    color: #dafffc; 
+}
+
+/* Shop separation */
+.shops > div > div > a[href="/viewshop/?shop_id=39"]::after,
+.shops > div > div > a[href="/viewshop/?shop_id=10"]::after,
+.shops > div > div > a[href="/viewshop/?shop_id=34"]::after,
+.shops > div > div > a[href="/viewshop/?shop_id=68"]::after,
+.shops > div > div > a[href="/viewshop/?shop_id=98"]::after,
+.shops > div > div > a[href="/viewshop/?shop_id=3"]::after {
+    content: ''; 
+    width: 30px;
+    display: inline-block;
+}
+
+/* All Shops */
+.shops > div > div > a[href="/viewshop/?shop_id=1"]::before {content: "Fresh"}
+.shops > div > div > a[href="/viewshop/?shop_id=2"]::before {content: "Magic"}
+.shops > div > div > a[href="/viewshop/?shop_id=3"]::before {content: "Toys"}
+.shops > div > div > a[href="/viewshop/?shop_id=4"]::before {content: "Clothes"}
+.shops > div > div > a[href="/viewshop/?shop_id=5"]::before {content: "Groom"}
+.shops > div > div > a[href="/viewshop/?shop_id=7"]::before {content: "Books"}
+.shops > div > div > a[href="/viewshop/?shop_id=8"]::before {content: "Cards"}
+.shops > div > div > a[href="/viewshop/?shop_id=9"]::before {content: "Battle"}
+.shops > div > div > a[href="/viewshop/?shop_id=10"]::before {content: "Defence"}
+.shops > div > div > a[href="/viewshop/?shop_id=12"]::before {content: "Garden"}
+.shops > div > div > a[href="/viewshop/?shop_id=13"]::before {content: "Pharm"}
+.shops > div > div > a[href="/viewshop/?shop_id=14"]::before {content: "Choc"}
+.shops > div > div > a[href="/viewshop/?shop_id=15"]::before {content: "Bread"}
+.shops > div > div > a[href="/viewshop/?shop_id=16"]::before {content: "Health"}
+.shops > div > div > a[href="/viewshop/?shop_id=17"]::before {content: "Gifts"}
+.shops > div > div > a[href="/viewshop/?shop_id=22"]::before {content: "Cafe"}
+.shops > div > div > a[href="/viewshop/?shop_id=25"]::before {content: "Neopian"}
+.shops > div > div > a[href="/viewshop/?shop_id=26"]::before {content: "Robo"}
+.shops > div > div > a[href="/viewshop/?shop_id=27"]::before {content: "Rock"}
+.shops > div > div > a[href="/viewshop/?shop_id=30"]::before {content: "Spooky"}
+.shops > div > div > a[href="/viewshop/?shop_id=31"]::before {content: "Spooky"}
+.shops > div > div > a[href="/viewshop/?shop_id=32"]::before {content: "Shroom"}
+.shops > div > div > a[href="/viewshop/?shop_id=34"]::before {content: "Coffee"}
+.shops > div > div > a[href="/viewshop/?shop_id=35"]::before {content: "Slushie"}
+.shops > div > div > a[href="/viewshop/?shop_id=37"]::before {content: "Icy"}
+.shops > div > div > a[href="/viewshop/?shop_id=38"]::before {content: "Books"}
+.shops > div > div > a[href="/viewshop/?shop_id=39"]::before {content: "Faerie"}
+.shops > div > div > a[href="/viewshop/?shop_id=40"]::before {content: "Faerie"}
+.shops > div > div > a[href="/viewshop/?shop_id=44"]::before {content: "Tyran"}
+.shops > div > div > a[href="/viewshop/?shop_id=48"]::before {content: "Usuki"}
+.shops > div > div > a[href="/viewshop/?shop_id=52"]::before {content: "Nippers"}
+.shops > div > div > a[href="/viewshop/?shop_id=53"]::before {content: "School"}
+.shops > div > div > a[href="/viewshop/?shop_id=56"]::before {content: "Merifood"}
+.shops > div > div > a[href="/viewshop/?shop_id=57"]::before {content: "Olde"}
+.shops > div > div > a[href="/viewshop/?shop_id=58"]::before {content: "Stamps"}
+.shops > div > div > a[href="/viewshop/?shop_id=61"]::before {content: "Wintery"}
+.shops > div > div > a[href="/viewshop/?shop_id=68"]::before {content: "Coins"}
+.shops > div > div > a[href="/viewshop/?shop_id=88"]::before {content: "Maraquan"}
+.shops > div > div > a[href="/viewshop/?shop_id=98"]::before {content: "Plushie"}
+.shops > div > div > a[href="/viewshop/?shop_id=69"]::before {content: "Supplies"}
+.shops > div > div > a[href="/viewshop/?shop_id=84"]::before {content: "Music"}
+
+/* Training */
+.aio-training-links{
+    display: block;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+.aio-training-links > a{
+    color: #dafffc !important;
+    text-decoration: none;
+}
+
+.aio-training-links > a:hover{
+    color: #F6ABB6 !important;
+}
+
+.aio-training-links > a:nth-child(1)::after{
+    content: " - ";
+    color: #dafffc;
+}
+
+/* Fishing */
+.fish > div {
+    color: white;
+}
